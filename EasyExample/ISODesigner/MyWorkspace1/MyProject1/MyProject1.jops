@@ -150,6 +150,7 @@
 				<Item IsBookmarked="0">
 					<Item IsBookmarked="0">
 						<Item IsBookmarked="0"/>
+<<<<<<< HEAD
 					</Item>
 				</Item>
 			</Item>
@@ -171,33 +172,13 @@
 				<Item IsBookmarked="0">
 					<Item IsBookmarked="0">
 						<Item IsBookmarked="0"/>
+=======
+>>>>>>> Uebung1
 						<Item IsBookmarked="0"/>
 					</Item>
 				</Item>
 				<Item IsBookmarked="0">
 					<Item IsBookmarked="0">
-						<Item IsBookmarked="0"/>
-					</Item>
-				</Item>
-				<Item IsBookmarked="0">
-					<Item IsBookmarked="0">
-						<Item IsBookmarked="0">
-							<Item IsBookmarked="0">
-								<Item IsBookmarked="0"/>
-							</Item>
-						</Item>
-					</Item>
-				</Item>
-			</Item>
-			<Item IsBookmarked="0">
-				<Item IsBookmarked="0">
-					<Item IsBookmarked="0">
-						<Item IsBookmarked="0"/>
-					</Item>
-				</Item>
-				<Item IsBookmarked="0">
-					<Item IsBookmarked="0">
-						<Item IsBookmarked="0"/>
 						<Item IsBookmarked="0"/>
 					</Item>
 				</Item>
@@ -217,6 +198,28 @@
 						<Item IsBookmarked="0"/>
 					</Item>
 				</Item>
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0"/>
+						<Item IsBookmarked="0"/>
+					</Item>
+				</Item>
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0">
+							<Item IsBookmarked="0">
+								<Item IsBookmarked="0"/>
+							</Item>
+						</Item>
+					</Item>
+				</Item>
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0"/>
+					</Item>
+				</Item>
 			</Item>
 			<Item IsBookmarked="0">
 				<Item IsBookmarked="0">
@@ -251,6 +254,7 @@
 				<Item IsBookmarked="0"/>
 			</Item>
 			<Item IsBookmarked="0">
+<<<<<<< HEAD
 				<Item IsBookmarked="0"/>
 				<Item IsBookmarked="0"/>
 			</Item>
@@ -267,6 +271,43 @@
 			</Item>
 			<Item IsBookmarked="0">
 				<Item IsBookmarked="0"/>
+=======
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0"/>
+					</Item>
+				</Item>
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0"/>
+					</Item>
+				</Item>
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0">
+					<Item IsBookmarked="0">
+						<Item IsBookmarked="0"/>
+					</Item>
+				</Item>
+>>>>>>> Uebung1
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0"/>
+				<Item IsBookmarked="0"/>
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0"/>
+				<Item IsBookmarked="0"/>
+			</Item>
+<<<<<<< HEAD
+=======
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0"/>
+			</Item>
+			<Item IsBookmarked="0">
+				<Item IsBookmarked="0"/>
 			</Item>
 			<Item IsBookmarked="0">
 				<Item IsBookmarked="0"/>
@@ -274,6 +315,11 @@
 			<Item IsBookmarked="0">
 				<Item IsBookmarked="0"/>
 			</Item>
+			<Item IsBookmarked="0"/>
+			<Item IsBookmarked="0"/>
+			<Item IsBookmarked="0"/>
+			<Item IsBookmarked="0"/>
+>>>>>>> Uebung1
 		</Item>
 	</SearchListItems>
 	<CategoryItems/>
