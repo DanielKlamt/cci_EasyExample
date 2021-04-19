@@ -94,6 +94,8 @@ void VTC_setPoolManipulation(iso_u8 u8Instance)
 
 iso_u32 Tageszaehler = 0;
 iso_u32 Gesamtzaehler = 0;
+iso_u32 Tagesziel =0;
+iso_u32 Gesamtziel =0;
 
 
 void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pButtonData) {
@@ -109,7 +111,11 @@ void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pBut
 		Tageszaehler++;
 		Gesamtzaehler++;
 		break;
-
+	case SoftKey_Minus_Minus:
+	case Button_MinusMinus:
+		Tageszaehler--;
+		Gesamtzaehler--;
+		break;
 	case SoftKey_Reset_Gesamtzaehler:
 	case Button_Reset_Gesamtzaehler:
 		Gesamtzaehler = 0;
@@ -145,7 +151,21 @@ void VTC_handleNumericValues(const struct InputNumber_S * pInputNumberData) {
 		Gesamtzaehler = pInputNumberData->newValue;
 		break;
 
+	case NumberVariable_Tagesziel:
+			// Variable mit dem Namen NumberVariable_Tagesziel wurde vom Benutzer am UT Verändert
+			ESP_LOGI(TAG, "you typed Tagesziel: %i", pInputNumberData->newValue); //der eingegebene Wert findet sich in pInputNumberData->newValue
+			Tagesziel = pInputNumberData->newValue;
+			// Speichern des Tagesziel; non-volatile; nicht flüchtig; spannungsausfallsicher gespeichert
+			setU32("CF-A", "Tagesziel", Tagesziel);
+			break;
 
+	case NumberVariable_Gesamtziel:
+			// Variable mit dem Namen NumberVariable_Gesamtziel wurde vom Benutzer am UT Verändert
+			ESP_LOGI(TAG, "you typed Gesamtziel: %i", pInputNumberData->newValue); //der eingegebene Wert findet sich in pInputNumberData->newValue
+			Gesamtziel = pInputNumberData->newValue;
+			// Speichern des Gesamtziel; non-volatile; nicht flüchtig; spannungsausfallsicher gespeichert
+			setU32("CF-A", "Gesamtziel", Gesamtziel);
+			break;
 	default:
 		break;
 	}
@@ -173,12 +193,23 @@ void VTC_setPoolReady(iso_u8 u8Instance)
 	// Laden aus dem Spannungsausfallsicheren Speicher ins RAM
 	// STANDARD-Wert = 0; wenn nichts abgespeichert.
 	Gesamtzaehler = getU32("CF-A", "Gesamtzaehler", 0);
+	// Laden aus dem Spannungsausfallsicheren Speicher ins RAM
+	// STANDARD-Wert = 0; wenn nichts abgespeichert.
+	Tagesziel = getU32("CF-A", "Tagesziel", 0);
+	// Laden aus dem Spannungsausfallsicheren Speicher ins RAM
+	// STANDARD-Wert = 0; wenn nichts abgespeichert.
+	Gesamtziel = getU32("CF-A", "Gesamtziel", 0);
+
 
 
 	// Senden des Wertes der lokalen Variable Tageszaehler an die NumberVariable_Tageszaehler
 	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Tageszaehler, Tageszaehler);
 	// Senden des Wertes der lokalen Variable Gesamtzaehler an die NumberVariable_Gesamtzaehler
 	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Gesamtzaehler, Gesamtzaehler);
+	// Senden des Wertes der lokalen Variable Tagesziel an die NumberVariable_Tagesziel
+	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Tagesziel, Tagesziel);
+	// Senden des Wertes der lokalen Variable Gesamtziel an die NumberVariable_Gesamtziel
+	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Gesamtziel, Gesamtziel);
 }
 
 
